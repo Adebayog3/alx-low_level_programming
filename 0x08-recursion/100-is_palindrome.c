@@ -14,6 +14,7 @@ int palind2(char *a, int l)
 		return (l - 1);
 	return (palind2(a + 1, l + 1));
 }
+
 /**
  * palind3 - compares string vs string reverse
  * @a: string
