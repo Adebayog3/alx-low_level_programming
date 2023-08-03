@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include "holberton.h"
 
 /**
  * main - check the code
