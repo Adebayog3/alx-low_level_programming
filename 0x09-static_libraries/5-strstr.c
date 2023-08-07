@@ -11,10 +11,5 @@
 
 char *_strstr(char *s, char *c)
 {
-return (strstr(s, c));
+	return (strstr(s, c));
 }
-int main(void)
-{
-	return (0);
-}
-
