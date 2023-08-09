@@ -38,7 +38,3 @@ char *argstostr(int ac, char **av)
 	}
 	return (str);
 }
-int main(int argc, char *argv[])
-{
-	return (0);
-}
