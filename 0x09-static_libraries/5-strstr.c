@@ -1,15 +1,27 @@
-#include <string.h>
 #include "main.h"
-
 /**
-* _strstr - locate a character in a string
-* @s: pointer to the string s to be searched
-* @c: pointer to character begin searched for
-*
-* Return: pointer to the first positon of the c
-*/
-
-char *_strstr(char *s, char *c)
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
+ */
+char *_strstr(char *haystack, char *needle)
 {
-	return (strstr(s, c));
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *l = haystack;
+		char *p = needle;
+
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
+	}
+
+	return (0);
 }
+

@@ -1,17 +1,29 @@
-#include <string.h>
 #include "main.h"
-
 /**
-* _memset - Fills memory with a constant byte
-* @s: char
-* @b: char
-* @n: int
-*
-* Return: a pointer to the memory s
-*/
-
-char *_memset(char *s, char b, unsigned int n)
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
+unsigned int _strspn(char *s, char *accept)
 {
-	memset(s, b, n);
-	return (s);
+	unsigned int n = 0;
+	int r;
+
+	while (*s)
+	{
+		for (r = 0; accept[r]; r++)
+		{
+			if (*s == accept[r])
+			{
+				n++;
+				break;
+			}
+			else if (accept[r + 1] == '\0')
+				return (n);
+		}
+		s++;
+	}
+	return (n);
 }
+
